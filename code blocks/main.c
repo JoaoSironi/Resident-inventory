@@ -13,6 +13,8 @@ int main() {
 	int opcao=0;
 	int adicionar=0;
 	int remover=0;
+	int i=0;
+	int j=0;
 	
 	system("color 74");
 	
@@ -23,8 +25,9 @@ int main() {
 	do{
 		system("cls");
 		system("color 04");
-		printf("	1| adiconar \n");
-		printf("	2| remover \n");
+		printf("	1| Adiconar \n");
+		printf("	2| Remover \n");
+		print("		3| Mostar arsenal");
 		printf("insira o opcao que deseja executar: ");
 		scanf("%d",&opcao);
 
@@ -61,8 +64,17 @@ int main() {
 			system("cls");
 		}
 		
+		if(opcao == 3){
+			system("cls");
+			for(i=0;i<=5;i++){
+				for(j=0;j<=10;j++){
+					printf("%d",inventory[i][j]);
+				}
+			}
+		}
+		
 		if(opcao != 1 && opcao != 2){
-			printf("OPCAO INVALIDA, TENTE NOVAMENTE!! \n");
+			printf("OPCAO INVALIDA, TENTE NOVAMENTE!! \n");	
 			system("pause");
 			system("cls");
 		}
